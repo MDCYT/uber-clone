@@ -1,0 +1,219 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Card from "../components/Card.astro";
+import Feature from "../components/Feature.astro";
+---
+
+<Layout title="Taxi Super Seguro">
+	<Navbar />
+	<main>
+	  <div class="first-banner">
+		<div class="container d-flex justify-content-center align-items-center">
+		  <div class="row">
+			<div class="col-md-6">
+			  <div class="mb-4">
+				<h1 class="text-white">Viajes Seguros</h1>
+				<h1 class="text-warning">Y De Calidad A Tu</h1>
+				<h1 class="text-warning">Alcance</h1>
+			  </div>
+			  <p class="text-white">
+				Vayas donde vayas, te ayudaremos a llegar de forma cómoda y segura. ¡La ciudad es tuya!
+			  </p>
+			  <p>
+				<a href="#">
+				  <img src="/img/google-play-badge.png" alt="Google Play" class="img-fluid" width="150" />
+				</a>
+				<a href="#">
+				  <img src="/svg/app-store-badge.svg" alt="App Store" class="img-fluid" width="150" />
+				</a>
+			  </p>
+			</div>
+			<div class="col-md-6">
+			  <img src="/img/taxi.png" alt="Taxi" class="img-fluid" />
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="second-banner">
+		<div class="container d-flex justify-content-center align-items-center">
+		  <div class="row">
+			<div class="col-md-4">
+			  <Card
+				title="Seguridad en cada viaje"
+				body="Tanto tú como tus envíos viajaréis con conductores profesionales. Siempre con los mayores estándares de calidad."
+			  />
+			</div>
+			<div class="col-md-4">
+			  <Card
+				title="Precios sin sorpresas"
+				body="Sabes el importe de tu viaje o de tu envío antes de pedirlo. Sin sorpresas y con precios asequibles y transparentes."
+			  />
+			</div>
+			<div class="col-md-4">
+			  <Card
+				title="Viajes neutros en carbono"
+				body="Compensamos el CO₂ de todos nuestros viajes. Además, nuestras motos son 100% eléctricas."
+			  />
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="three-banner justify-content-center align-items-center">
+		<img src="/img/mapa.png" alt="Mapa" class="img-fluid" width="25%" />
+	  </div>
+	  <div class="four-banner">
+		<div class="container justify-content-center align-items-center py-5">
+		  <div class="row py-3">
+			<div class="col-md-6">
+			  <h1 class="text-white px-4">Muchas opciones en una solo App</h1>
+			</div>
+			<div class="col-md-6">
+			  <p class="text-white px-4">
+				Viaja, conduce, envía o recibe la compra en casa. Elige lo que necesites desde un mismo lugar.
+			  </p>
+			</div>
+		  </div>
+		  <div class="row py-3">
+			<div class="col-md-4">
+			  <Feature
+				title="Basico"
+				body="Nuestros clásicos coches con conductor, disponibles en todas las ciudades con coches modernos y de calidad."
+			  />
+			</div>
+			<!-- Se repitió el bloque Feature para reducir código -->
+			{[...Array(5)].map((_, index) => (
+			  <div class="col-md-4">
+				<Feature
+				  title="Basico"
+				  body="Nuestros clásicos coches con conductor, disponibles en todas las ciudades con coches modernos y de calidad."
+				/>
+			  </div>
+			))}
+		  </div>
+		</div>
+	  </div>
+	  <div class="five-banner">
+		<div class="download-banner justify-content-center align-items-center">
+		  <div class="yeah px-4 py-4 my-4 mx-4">
+			<div class="row justify-content-center align-items-center">
+			  <div class="col-md-6 flex justify-content-center align-items-center text-center">
+				<h1 class="text-white text-center">
+				  ¡Descarga la app y saca partido a tu ciudad!
+				</h1>
+				<a href="#">
+				  <img src="/img/google-play-badge.png" alt="Google Play" class="img-fluid" width="150" />
+				</a>
+				<a href="#">
+				  <img src="/svg/app-store-badge.svg" alt="App Store" class="img-fluid" width="150" />
+				</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</main>
+	<footer class="footer bg-light py-5">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-md-3 mb-4">
+			<div class="d-flex align-items-center mb-3">
+			  <img src="/img/logo.png" alt="Logo" class="img-fluid" width="50" />
+			</div>
+			<p class="text-muted">
+			  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</p>
+		  </div>
+		  <div class="col-md-3 mb-4">
+			<h3 class="fw-bold mb-4">Enlaces Rápidos</h3>
+			<ul class="list-unstyled">
+			  {[...Array(5)].map((_, index) => (
+				<li class="mb-2">
+				  <a href="#" class="text-muted">Enlace {index + 1}</a>
+				</li>
+			  ))}
+			</ul>
+		  </div>
+		  <div class="col-md-3 mb-4">
+			<h3 class="fw-bold mb-4">Contacto</h3>
+			<ul class="list-unstyled">
+			  {[...Array(3)].map((_, index) => (
+				<li class="d-flex align-items-center mb-2">
+				  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+					<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+				  </svg>
+				  <a href="#" class="text-muted ms-2">+51 987654321</a>
+				</li>
+			  ))}
+			</ul>
+		  </div>
+		  <div class="col-md-3 mb-4">
+			<h3 class="fw-bold mb-4">Redes Sociales</h3>
+			<div class="d-flex justify-content-start">
+			  <img src="/img/redes-sociales.png" alt="Redes Sociales" class="img-fluid me-2" width="200" />
+			</div>
+			<div class="d-flex justify-content-start">
+			  <img src="/img/paypal.png" alt="Paypal" class="img-fluid me-2" width="200" />
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</footer>
+  </Layout>
+  
+  <style>
+	.first-banner, .second-banner, .three-banner, .four-banner, .five-banner {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+  
+	.first-banner {
+	  background-image: url("/svg/banner_1.svg");
+	  background-position: bottom;
+	  background-repeat: repeat-x;
+	  height: 85vh;
+	}
+  
+	.second-banner {
+	  background-image: url("/svg/banner_2.svg");
+	  background-position: top;
+	  background-repeat: repeat-x;
+	  height: 65vh;
+	}
+  
+	.three-banner {
+	  background-color: black;
+	  height: 60vh;
+	}
+  
+	.four-banner {
+	  background-color: #110a02;
+	  height: 125vh;
+	}
+  
+	.five-banner {
+	  background-color: white;
+	  height: 70vh;
+	}
+  
+	.download-banner {
+	  background-color: #000;
+	  height: 70vh;
+	  width: 100%;
+	  display: flex;
+	  border-bottom-right-radius: 50px;
+	  border-bottom-left-radius: 50px;
+	}
+  
+	.yeah {
+	  background-color: #fecf0826;
+	  border-radius: 25px;
+	}
+  
+	.footer {
+	  background-color: #fff;
+	  height: 50vh;
+	  display: flex;
+	}
+  </style>
